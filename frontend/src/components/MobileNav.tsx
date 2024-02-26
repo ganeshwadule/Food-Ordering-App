@@ -6,7 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import MenuLogin from "./MenuLogin";
 
 const MobileNav = () => {
-    const { user , isAuthenticated } = useAuth0();
+    const { loginWithRedirect, isAuthenticated } = useAuth0();
   return(
    <Sheet>
     <SheetTrigger>
@@ -20,7 +20,8 @@ const MobileNav = () => {
         <SheetTitle>Welcome to the Foodish.com</SheetTitle>
         <Separator/>
         <SheetDescription className="flex">
-            <Button className="flex-1 font-bold bg-orange-500">Log In</Button>
+            <Button className="flex-1 font-bold bg-orange-500"
+            onClick={async () => await loginWithRedirect()}>Log In</Button>
     </SheetDescription>
     
     </SheetContent>
