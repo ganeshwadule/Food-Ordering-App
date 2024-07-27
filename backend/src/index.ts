@@ -17,7 +17,7 @@ app.use(cors());
 // app.use('api/my/user',myUserRoute) => This will not work because "/" is not there in beginning
 
 app.use('/api/my/user',myUserRoute)
-
+// I wan r to make github contribution
 app.listen(7000,()=>{
     console.log("Server is started successfully");
 })
